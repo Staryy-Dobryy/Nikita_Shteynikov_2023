@@ -1,21 +1,21 @@
-﻿List<int> people = new List<int>();
+﻿List<int> nums = new List<int>();
 
 Console.WriteLine("Enter 10 values: ");
 for (int i = 0; i < 10; i++)
 {
     Console.Write(i + " - ");
-    people.Add(Convert.ToInt32(Console.ReadLine()));
+    nums.Add(Convert.ToInt32(Console.ReadLine()));
 }
 
 Console.Write("Enter dublicate value: ");
 int value = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 0; i < people.Count; i++)
+for (int i = 0; i < nums.Count; i++)
 {
-    Console.WriteLine(people[i]);
-    if (people[i] == value)
+    Console.WriteLine(nums[i]);
+    if (nums[i] == value)
     {
-        people.Insert(i++, 3);
-        Console.WriteLine(people[i]);
+        nums.Insert(i++, value);
+        Console.WriteLine(nums[i]);
     }
 }
